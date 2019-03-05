@@ -1,0 +1,88 @@
+{
+	margin: 0;
+	padding:0;
+}
+
+
+/*INDEX.PHP*/
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 430px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header h3{
+color: white;
+
+
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+}
+
+
+/*BOTONES INDEX - RECUPERAR PASS*/
+.btn-estilo{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.btn-estilo:hover{
+color: white;
+background-color: #06f;
+
+}
+
+
+/*RECUPERAR PASS*/
+
+
+.btn-block{
+background-color: #FFC312;
+border-color: none;
+}
+.repabtn:hover{
+color: white;
+background-color: #06f;
+font-weight: bold;
+
+}
+	.middle{
+	width:700px;
+	height:555px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top:20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:12px;
+	padding:50px;
+	}
+	
+	#eye{
+	font-size:125%;
+	cursor:pointer;
+	postion:absolute;
+	float:right;
+	margin-top:-31px;
+	margin-right:12px;
+	}
+
+
