@@ -1,11 +1,13 @@
 <?php require 'config/db.php';
-require 'include/validar.php';?>
+require 'include/validar.php';
+
+?>
 
 
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
-  <a class="logo"><img src="images/red_de_salud_pacifico_sur.png" alt="Red de Salud Pacífico Sur" class="logo-img"></a> 
+  <a class="logo" href="oei.php"><img src="images/red_de_salud_pacifico_sur.png" alt="Red de Salud Pacífico Sur" class="logo-img"></a> 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -46,13 +48,18 @@ require 'include/validar.php';?>
           Programa o Area
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registro_proarea.php">Registrar Programa/Area</a>
+          <!-- <a class="dropdown-item" href="registro_proarea.php">Registrar Programa/Area</a> -->
           <a class="dropdown-item" href="bandeja_proarea.php">Bandeja Programa/Area</a>
           
       </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">Bandeja de peticiones</a>
-
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Peticiones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="bandeja_peticiones.php">Bandeja de peticiones</a>
+          <a class="dropdown-item" href="reporte.php">Reporte de peticiones</a>
+          
       </li>
 
           <li class="nav-item dropdown">
@@ -61,7 +68,7 @@ require 'include/validar.php';?>
      print($_SESSION['nombre']. " " .$_SESSION['paterno']. " ". $_SESSION['materno']) ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="recuperar_password.php">Mi cuenta </a>
+          <a class="dropdown-item" href="micuenta.php">Mi cuenta </a>
           <a class="dropdown-item" href="logout.php">Cerrar sesion </a>
           
       </li>
@@ -69,7 +76,7 @@ require 'include/validar.php';?>
                     
                   ?>
 <li class="nav-item">
-        <a class="nav-link " href="#">Registrar averia</a>
+        <a class="nav-link " href="bandeja_averia.php">Registrar averia</a>
 
       </li>
                   <li class="nav-item dropdown">
@@ -78,7 +85,7 @@ require 'include/validar.php';?>
      print($_SESSION['nombre']. " " .$_SESSION['paterno']. " ". $_SESSION['materno']) ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="recuperar_password.php">Mi cuenta </a>
+          <a class="dropdown-item" href="micuenta.php">Mi cuenta </a>
           <a class="dropdown-item" href="logout.php">Cerrar sesion </a>
           
       </li>

@@ -160,33 +160,69 @@ $('#example').DataTable({});
 
 
 
-
-
 $(document).ready(function(){
-  $.ajax({
+ $.ajax({
     type: 'POST',
-    url: 'include/cargar_unidad.php'
+    url: 'cargar_listas.php'
   })
   .done(function(listas_rep){
     $('#unidadselect').html(listas_rep)
   })
   .fail(function(){
-    alert('error')
+    alert('Hubo un errror al cargar las listas_rep')
   })
 
   $('#unidadselect').on('change', function(){
-    var id_unidad = $('#unidadselect').val()
+    var id = $('#unidadselect').val()
     $.ajax({
       type: 'POST',
-      url: 'include/cargar_proarea.php',
-      data: {'id_unidad': id_unidad}
+      url: 'cargar_videos.php',
+      data: {'id': id}
     })
     .done(function(listas_rep){
       $('#proareaselect').html(listas_rep)
     })
     .fail(function(){
-      alert('error')
+      alert('Hubo un errror al cargar los vídeos')
     })
   })
 
+
 });
+
+
+	$(document).ready(function()
+{    
+ $("#dniTrabajador").keyup(function()
+ {  
+  var name = $(this).val(); 
+  
+  if(name.length >=7 )
+  {  
+     
+   $.ajax({
+    
+    type : 'POST',
+    url  : 'check_trabajador.php',
+    data : $(this).serialize(),
+    success : function(data)
+        {
+              $("#resultt").html(data);
+           }
+    });
+    return false;
+   
+  }
+  else
+  {
+   $("#resultt").html('');
+  }
+ }
+ )
+ ;
+ 
+});
+
+
+
+
