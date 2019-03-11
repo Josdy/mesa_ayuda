@@ -54,9 +54,9 @@ if ($result->num_rows>0) {
 		$nombreunidad=$row['nombreunidad'];
 		 ?>
 		<tr>
-		<td><?php echo $id_proarea; ?></td>
-		<td><?php echo $nombreproarea; ?></td>
-		<td><?php echo $nombreunidad ?></td>
+		<td><?php echo ($id_proarea); ?></td>
+		<td><?php echo ($nombreproarea); ?></td>
+		<td><?php echo ($nombreunidad )?></td>
 		<td>
 		<a href="#edita<?php echo $id_proarea;?>" data-toggle="modal"> 
 		<button type='button' class='btn btn-warning btn-sm'><span class='fas fa-edit' aria-hidden='true'></span></button>
@@ -83,7 +83,7 @@ if ($result->num_rows>0) {
 		<div class   ="form-group">
 		
 		<label for="nombreproarea">Nombre del programa o area:</label>
-		<input type="text" class="form-control" name="nombreproarea" placeholder="Escriba el nombre del programa o area" value="<?php echo $nombreproarea; ?>" required="" autofocus>
+		<input type="text" class="form-control" name="nombreproarea" placeholder="Escriba el nombre del programa o area" value="<?php echo ($nombreproarea); ?>" required="" autofocus>
 		
 		<label for="selectunidad">Unidad/Oficina:</label>
 		<input type="hidden" class="form-control"  name="id_unidad" value="<?php echo $id_unidad; ?>">

@@ -4,6 +4,7 @@ require 'include/validar.php';
 session_start();
 
     
+
 ?>
 
 
@@ -27,7 +28,7 @@ session_start();
     
      
         
-    <div class="w-75 p-3 container" style="margin-top: 10px; margin-bottom: 50px;">
+    <div class="w-75 p-3 container" style="margin-top: 10px; margin-bottom: 100px;">
             
           <form  method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
   
@@ -35,8 +36,12 @@ session_start();
 
   <div class="form-group col-6">
     <h4>DATOS DEL PERSONAL</h4><br>
+    <label for="dniTrabajador">DNI del Trabajador:</label>
+    <input type="text" class="form-control" name="dniTrabajador" id="dniTrabajador"placeholder="Escriba el dni del trabajador" required="" autofocus="">
+    <label id="resultt"></label>
+    <br>
     <label for="nombresTrabajador">Nombres del Trabajador:</label>
-    <input type="text" class="form-control" name="nombresTrabajador" placeholder="Escriba el nombre del trabajador" required="" autofocus="">
+    <input type="text" class="form-control" name="nombresTrabajador" placeholder="Escriba el nombre del trabajador" required="" >
     <br>
     <label for="paternoTrabajador">Apellido Paterno:</label>
     <input type="text" class="form-control" name="paternoTrabajador" placeholder="Escriba el apellido paterno del trabajador" required="">
@@ -44,56 +49,17 @@ session_start();
     <label for="maternoTrabajador">Apellido Materno:</label>
     <input type="text" class="form-control" name="maternoTrabajador" placeholder="Escriba el apellido materno del trabajador" required="">
     <br>
- <script>
-      $(document).ready(function(){
-        $("#unidadselect").change(function () {
  
-          
-          
-          $("#unidadselect option:selected").each(function () {
-            id_unidad = $(this).val();
-            $.post("combo_proarea.php", { id_unidad: id_unidad }, function(data){
-              $("#proareaselect").html(data);
-            });            
-          });
-        })
-      });
-      
-     
-    </script>
     
+
     <label for="selectUnidad">Unidad:</label>
     <select name="unidadselect" class="form-control" id="unidadselect">
-     <option value="#">Seleccionar Unidad</option> 
-
-    <?php $queryunidad= "SELECT id_unidad,nombre FROM unidad";
-    $validarunidad= $conexion->query($queryunidad); 
-    while($selectu = mysqli_fetch_array($validarunidad)){
-    
-    ?>
-    <option value="<?php echo $selectu['id_unidad'];?>"><?php echo $selectu['nombre'];?> </option>
-    <?php 
-    }    
-    ?> 
-    </select>
-    <br>
-   
-
-
-    <label for="selectproarea">Programa/Area:</label>
-    <select name="proareaselect" class="form-control" id="proareaselect" action="combo_proarea.php">
-     <option value="#">Seleccionar Programa/Area</option> 
-
-
-
  
-
-     
-    
-
-
-
-
+     </select>
+    <br>
+  <label for="selectproarea">Programa/Area:</label>
+    <select name="proareaselect" class="form-control" id="proareaselect">
+     <option value="#">Seleccionar Programa/Area</option> 
        </select>
 
 
@@ -105,12 +71,12 @@ session_start();
     <label id="result"></label>
     <br>
     <label for="passwordTrabajador">Password:</label>
-    <input type="text" class="form-control" name="passwordusuario" placeholder="Escriba la contraseña" required="">
+    <input type="password" class="form-control" name="passwordusuario" placeholder="Escriba la contraseña" required="">
   </div>
   </div>
   
 <div class="d-flex justify-content-center ">
-  <button type="submit" class="btn btn-block repabtn col-2">Aceptar</button></div>
+  <button type="submit" class="btn btn-block repabtn col-2" name="registrarpersonal">Aceptar</button></div>
 </form>
 
 

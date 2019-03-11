@@ -2,7 +2,11 @@
 require "config/db.php";
 require 'include/validar.php';
 session_start();
-if (empty($_SESSION['nombre'])) {
+
+// $u=$_SESSION['nombre'];
+// echo $u;
+
+if (empty($_SESSION['username'])) {
  header("Location: index.php");
 }else{
 

@@ -12,6 +12,8 @@ session_start();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de Ayuda:::Bandeja Unidad</title>
+
 
 <link rel="shortcut icon" href="images/red_de_salud_pacifico_sur.ico">
 <meta property="og:title" content="Red de Salud Pacifico Sur" />
@@ -20,13 +22,6 @@ session_start();
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
-<!-- 
-<script>
-$(document).ready(function() {
-$('#example').DataTable({});
-});
-
-</script> -->
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 
 </head>
@@ -66,7 +61,7 @@ $id = $row['id_unidad'];
 $nombreunidad = $row['nombre'];
      ?>
      <tr>
-       <td><?php echo $id ?></td>
+       <td><?php echo  $id ?></td>
        <td><?php echo $nombreunidad ?></td>
        <td>
          <a href="#edita<?php echo $id;?>" data-toggle="modal"> 
